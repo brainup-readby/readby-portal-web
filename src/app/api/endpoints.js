@@ -1,0 +1,9 @@
+export const API_LOGIN = '/login';
+export const API_FETCHUSERINFO = '/user_info';
+export const API_COURSE = '/course';
+export const API_COURSE_STATUS = '/course';
+export const API_SUBJECT = '/subject';
+export const API_SUBJECT_STATUS = '/subject';
+export const API_CHAPTER = '/chapter';
+export const API_TOPIC = '/topic';
+export const API_USER = '/user';

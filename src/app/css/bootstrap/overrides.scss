@@ -1,0 +1,29 @@
+// variables that need to be set before bootstrap reboot can be used safely
+$body-bg: #f0f3f5;
+$body-color: #3e3f42;
+$primary: #3c94cf;    // Also see muiTheme.js
+$secondary: #52C5DE;  // Also see muiTheme.js
+$success: #43a047;
+$danger: #d32f2f;
+$font-family-base: 'Roboto', sans-serif;
+// make breakpoints of material-ui and bootstrap the same
+$grid-breakpoints: (
+  xs: 0,
+  sm: 600px,
+  md: 960px,
+  lg: 1440px,
+  xl: 1920px,
+);
+// $container-max-widths: (
+//   xl: 1440px
+// );
+$grid-gutter-width: 30px;
+$grid-gutter-widths: (
+  ('default', $grid-gutter-width),
+  (600, 60px), (960, 80px), (1440, 120px)
+);
+$drawer-width: 240px;
+
+.MUIDataTableFilter-root .MuiGridListTile-root{
+  width: 100%!important;
+}

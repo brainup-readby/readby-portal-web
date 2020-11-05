@@ -1,0 +1,218 @@
+@-ms-viewport {
+  width: device-width;
+}
+
+html {
+  font-size: 0.875rem;
+  @include media-breakpoint-up(sm) {
+    font-size: 1rem;
+  }
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+.iossc {
+  -webkit-overflow-scrolling: touch;
+}
+
+.font-weight-heavy {
+  font-weight: 600;
+}
+
+.mui-link-button {
+  &:hover {
+    color: white;
+  }
+}
+
+.mui-label-center {
+  width: fit-content;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mui-label-center-shrink {
+  transform: translate(0, 0) scale(0.75);
+  transform-origin: top center;
+}
+
+.text-blackjack {
+  font-family: BlackJack, cursive;
+}
+
+.bg-body {
+  background-color: $body-bg;
+}
+.bg-yellow {
+  background-color: #f5cc45;
+}
+.text-px-blue {
+  color: #468ea0;
+}
+.text-px-green {
+  color: #65be9f;
+}
+.text-px-orange {
+  color: #fc960a;
+}
+.text-px-yellow {
+  color: #f5cc45;
+}
+.w-mx100 {
+  max-width: 100vw;
+}
+
+@import "./mixins.scss";
+
+.mt-neg-8 {
+  @include px-responsive-margins(
+    (
+      top: -1
+    )
+  );
+}
+.mt-neg-6 {
+  @include px-responsive-margins(
+    (
+      top: -2
+    )
+  );
+}
+.mt-neg-4 {
+  @include px-responsive-margins(
+    (
+      top: -4
+    )
+  );
+}
+.mt-neg-2 {
+  @include px-responsive-margins(
+    (
+      top: -6
+    )
+  );
+}
+.mt-neg-1 {
+  @include px-responsive-margins(
+    (
+      top: -8
+    )
+  );
+}
+
+.row.py-half {
+  @include px-responsive-paddings(
+    (
+      top: 3
+    )
+  );
+  > .col,
+  > [class*="col-"] {
+    @include px-responsive-paddings(
+      (
+        left: 4,
+        right: 4,
+        bottom: 3
+      )
+    );
+  }
+}
+
+.white-overlay {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+nav.drawer {
+  > a {
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: transparent;
+    > i.icon {
+      color: gray;
+    }
+    svg.arr {
+      opacity: 1;
+    }
+    svg.open {
+      color: gray;
+    }
+    svg.close {
+      color: $primary;
+    }
+    &:hover {
+      background: rgba(255, 255, 255, 0.05);
+      svg.arr {
+        color: $primary;
+      }
+    }
+    span {
+      color: white;
+      font-size: 0.95rem;
+    }
+    &.part-active {
+      border-left-color: rgba(255, 255, 255, 0.3);
+    }
+    &.active {
+      border-left-color: $primary;
+      background: rgba(255, 255, 255, 0.1);
+      > i.icon {
+        color: $primary;
+      }
+      span {
+        color: $primary;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+header.AppBar {
+  margin-left: $drawer-width;
+  @include media-breakpoint-up(md) {
+    width: calc(100% - #{$drawer-width});
+  }
+}
+
+.DateRangePicker_picker{
+  z-index: 999!important;
+}
+
+.MuiTableCell-head {
+  font-size: 15px!important;
+  font-weight: 900!important;
+}
+
+.MuiTableCell-root:last-child{
+  @include media-breakpoint-up(md){
+    padding-right: 6px!important;
+    width: 20%!important;
+  }
+}
+
+.MUIDataTableToolbar-actions{
+  text-align: right!important;
+}
+
+.login-card{
+  width: 100%;
+  max-width: 350px;
+  @include media-breakpoint-down(sm){
+    max-width: 300px;
+  }
+}
+
+.MUIDataTableFilter-resetLink{
+  @include media-breakpoint-down(sm){
+    margin-left: 0px!important;
+  }
+}

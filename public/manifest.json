@@ -1,0 +1,8 @@
+{
+  "short_name": "READBY Admin Portal",
+  "name": "READBY Admin Portal",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#3c94cf",
+  "background_color": "#ffffff"
+}

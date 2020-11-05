@@ -1,0 +1,46 @@
+@mixin px-responsive-paddings($padding-factors, $gutter-breakpoints: $grid-gutter-widths) {
+  @each $breakpoint, $value in $gutter-breakpoints {
+    @if $breakpoint == 'default' {
+      @each $edge, $divider in $padding-factors {
+        padding-#{$edge}: if($divider != 0, #{$value / $divider}, 0px);
+      }
+    } @else if $breakpoint > 0 {
+      @media (min-width: #{$breakpoint}px) {
+        @each $edge, $divider in $padding-factors {
+          padding-#{$edge}: if($divider != 0, #{$value / $divider}, 0px);
+        }
+      }
+    }
+  }
+}
+
+@mixin px-responsive-margins($margin-factors, $gutter-breakpoints: $grid-gutter-widths) {
+  @each $breakpoint, $value in $gutter-breakpoints {
+    @if $breakpoint == 'default' {
+      @each $edge, $divider in $margin-factors {
+        margin-#{$edge}: if($divider != 0, #{$value / $divider}, 0px);
+      }
+    } @else if $breakpoint > 0 {
+      @media (min-width: #{$breakpoint}px) {
+        @each $edge, $divider in $margin-factors {
+          margin-#{$edge}: if($divider != 0, #{$value / $divider}, 0px);
+        }
+      }
+    }
+  }
+}
+
+@mixin no-scroll-bar() {
+  &::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    height: 0;
+    width: 0;
+  }
+  &::-webkit-scrollbar-track {
+    height: 0;
+    width: 0;
+  }
+}  
